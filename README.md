@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎙️ PrepAI — AI Mock Interview Platform
 
-## Getting Started
+An intelligent mock interview platform powered by real-time AI voice agents. Practice interviews, get instant feedback, and level up your interview game — all in one place.
 
-First, run the development server:
+
+## ✨ Features
+
+- 🎤 **Real-time AI Voice Interviews** — Powered by Vapi AI voice agents
+- 🤖 **Custom Interview Generation** — AI generates role-specific questions using Google Gemini
+- 🔐 **Authentication** — Secure Sign Up / Sign In with Firebase Auth
+- 📊 **Instant Feedback** — Detailed performance feedback after every interview session
+- 💾 **Interview History** — All your past interviews saved and accessible
+- 📱 **Responsive UI** — Clean, modern design with Tailwind CSS
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js 15 | Frontend Framework |
+| Tailwind CSS | Styling |
+| Firebase | Auth + Database |
+| Vapi | AI Voice Agent |
+| Google Gemini | Interview Question Generation |
+
+---
+
+## ⚙️ Getting Started
+
+### Prerequisites
+- Node.js 18+
+- Firebase account
+- Vapi account
+- Google Gemini API key
+
+### Installation
 
 ```bash
+# Clone the repo
+git clone https://github.com/your-username/prepai.git
+
+# Navigate into the project
+cd prepai
+
+# Install dependencies
+npm install
+
+# Start the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a `.env.local` file in the root directory and add:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Firebase
+NEXT_PUBLIC_FIREBASE_API_KEY=your_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_domain
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
 
-## Learn More
+# Vapi
+NEXT_PUBLIC_VAPI_WEB_TOKEN=your_vapi_token
+VAPI_WORKFLOW_ID=your_workflow_id
 
-To learn more about Next.js, take a look at the following resources:
+# Google Gemini
+GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+prepai/
+├── app/
+│   ├── (auth)/         # Sign in / Sign up pages
+│   ├── (root)/         # Main app pages
+│   │   ├── page.tsx    # Home page
+│   │   └── interview/  # Interview session pages
+├── components/         # Reusable UI components
+├── firebase/           # Firebase config
+├── lib/                # Utility functions & actions
+└── public/             # Static assets
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧠 How It Works
+
+1. **Sign up / Log in** with your account
+2. **Generate an interview** — choose role, level, and tech stack
+3. **Start the session** — AI voice agent conducts the interview in real time
+4. **Get feedback** — detailed analysis of your performance after each session
+5. **Track progress** — review past interviews anytime
+
+---
+
+## 🙌 Acknowledgements
+
+- [Vapi](https://vapi.ai) — for the voice AI infrastructure
+- [Google Gemini](https://ai.google.dev) — for AI-powered question generation
+- [Firebase](https://firebase.google.com) — for auth and database
+
+---
+
+## 📄 License
+
+MIT License — feel free to use and modify.
+
+---
+
+> Built with 💙 by Samruddhi Gulhane
+
