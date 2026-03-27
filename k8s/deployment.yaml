@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: interview-prep-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: interview-prep
+  template:
+    metadata:
+      labels:
+        app: interview-prep
+    spec:
+      containers:
+        - name: interview-prep
+          image: tejaspokale/interview-prep:latest
+          ports:
+             - containerPort: 3000
